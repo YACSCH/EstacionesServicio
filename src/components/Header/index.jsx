@@ -12,4 +12,4 @@ const Header = () => {
   )
 }
 
-export default index
+export default Header
