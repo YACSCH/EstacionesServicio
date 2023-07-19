@@ -1,32 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { GetToken, GetRegion, GetComuna, GetEstaciones } from "../../api/getData"
+import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 
-const Main = () => {
-  const [data, setData] = useState([]);
-
-   useEffect(() => {
-        const data = async () => {
-          const response = await GetEstaciones();
-          console.log(response.data)
-          setData(response.data);
-        }
-    data()
- }, []);
-
-    
+const Main = (props) => {
+  const { data } = props    
     return (
-      <div>
-     { Object.values(data).map((item,index) => (
-        <div key={index}>
-          <h1>{item.razon_social}</h1>
-          <p>Dirección: {item.direccion_calle} {item.direccion_numero}</p>
-          <p>Comuna: {item.nombre_comuna}</p>
-          <p>Región: {item.nombre_region}</p>
-          <p>Latitud: {item.ubicacion.latitud}</p>
-          <p>Longitud: {item.ubicacion.longitud}</p>
-        </div>
-      ))}
-    </div>
+      <main>
+      {   data ?
+        Object.values(data).map((item,index) => (
+        <article className="card" key={index}>
+          <h3 className="card-title">{item.razon_social}</h3>
+          <section className="card-body">
+            <p className="card-text">Dirección: {item.direccion_calle} {item.direccion_numero}</p>
+            <p className="card-text">Comuna: {item.nombre_comuna}</p>
+            <p className="card-text">Región: {item.nombre_region}</p>
+
+          </section>
+        </article>
+      )) :<>Sin informacion</> }
+    </main>
   )
 }
 export default Main

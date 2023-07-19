@@ -1,7 +1,14 @@
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Main from  '../components/Main'
 
 function Callcenter() {
   return (
-    <div>Callcenter</div>
+    <>
+      <Header/>
+      <Main data = { null } />
+      <Footer/>
+    </>
   )
 }
 

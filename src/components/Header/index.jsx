@@ -8,10 +8,10 @@ const Header = () => {
         Estaciones de Servicio
         </p>
         <nav>
-            <Link to="/">Inicio</Link>
-            <Link to="/estaciones">Estaciones</Link>
-            <Link to="/distribuidores">Distribuidores</Link>
-            <Link to="/Callcenter">CallCenter</Link>
+            <Link to="/" className='nav-item'>Inicio</Link>
+            <Link to="/estaciones" className='nav-item'>Estaciones</Link>
+            <Link to="/distribuidores" className='nav-item'>Distribuidores</Link>
+            <Link to="/Callcenter" className='nav-item'>CallCenter</Link>
             
         </nav>
     </header>
