@@ -1,11 +1,17 @@
+import {Link} from 'react-router-dom'
+
 const Header = () => {
   return (
     <header>
-        <img src="" alt="" />
+        <p>
+        <img src="" alt="" /> 
+        Estaciones de Servicio
+        </p>
         <nav>
-            <ul>Inicio</ul>
-            <ul>Regiones</ul>
-            <ul>Contacto</ul>
+            <Link to="/">Inicio</Link>
+            <Link to="/estaciones">Estaciones</Link>
+            <Link to="/distribuidores">Distribuidores</Link>
+            <Link to="/Callcenter">CallCenter</Link>
             
         </nav>
     </header>
