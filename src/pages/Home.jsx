@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
         <Header/>
-        <Main type = "Inicio" />
+        <Main type = "home" />
         <Footer/>
     </>
     
