@@ -9,12 +9,11 @@ function Distribuidores() {
   const [distribuidores, setDistribuidores] = useState([]);
 
   useEffect(() => {
-       const distribuidores = async () => {
+       const dataDistribuidores = async () => {
          const response = await GetDistribuidores();
          setDistribuidores(response.data);
-         return response.data
        }
-       distribuidores()
+       dataDistribuidores()
 }, []);
 
  return (

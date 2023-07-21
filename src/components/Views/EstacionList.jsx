@@ -9,6 +9,7 @@ const  EstacionList = ({ estaciones }) => {
           <p className="card-text">Dirección: {item.direccion_calle} {item.direccion_numero}</p>
           <p className="card-text">Comuna: {item.nombre_comuna}</p>
           <p className="card-text">Región: {item.nombre_region}</p>
+          <p className="card-text">Región: {item.ubicacion.latitud}</p>
 
         </section>
       </article>

@@ -6,21 +6,19 @@ import Footer from '../components/Footer'
 import Main from  '../components/Main'
 
 function Estaciones() {
-  const [estaciones, setEstaciones] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
        const estaciones = async () => {
          const response = await GetEstaciones();
-         setEstaciones(response.data);
-         return response.data
+         setData(response.data);
        }
    estaciones()
 }, []);
-
  return (
    <>
        <Header/>
-       <Main data = { estaciones }  type="estaciones"/>
+       <Main data = { data }  type="estaciones"/>
        <Footer/>
    </>
    
