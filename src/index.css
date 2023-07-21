@@ -42,9 +42,14 @@ nav {
 }
 .mapa{
     width: 100%;
+    margin: 10px;
+    border-radius: 2%;
    
 }
-
+.loading {
+    font-size: 50px;
+    align-content: center;
+}
 main {
     grid-area: main;
     display:flex;
