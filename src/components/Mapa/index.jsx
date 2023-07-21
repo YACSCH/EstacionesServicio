@@ -7,13 +7,7 @@ import iconShadow from '../../../public/img/marker-shadow.png'
 let iconUbicacion = new L.icon({
     iconUrl:icon,
     iconShadow: iconShadow,
-    iconAnchor: null,
-    popupAnchor: null,
-    shadowUrl: null,
-    shadowSize: null,
-    shadowAnchor: null,
-    iconSize: new L.Point(60, 75),
-  })
+})
 
 const Mapa = ({ data, pos}) => {
 
