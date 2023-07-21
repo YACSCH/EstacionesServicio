@@ -18,8 +18,8 @@ export const GetToken =  async () => {
 
 export const GetEstaciones = async () => {
     const base_url = import.meta.env.VITE_URL_ESTACIONES
-    const token = await GetToken()
- 
+    const token = await GetToken() 
+    
   try {
         const response = await axios.get(base_url, {
             headers: {
