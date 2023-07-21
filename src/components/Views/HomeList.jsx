@@ -24,7 +24,10 @@ const HomeList = ({ datos }) => {
        
         <Marker position= {[item.ubicacion.latitud, item.ubicacion.longitud]} con={iconUbicacion}>
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+            Distribuidor: {item.distribuidor.nombre } <br /> 
+            Direccion: {item.direccion_calle} {item.direccion_numero} <br />
+            Horario de Atencion : {item.horario_atencion} 
+            
           </Popup>
         </Marker>
          ))}
