@@ -59,7 +59,7 @@ main {
 .card {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 360px;
     height: auto;
     margin: 5px;
     border: 1px solid gray;
@@ -68,10 +68,9 @@ main {
     box-shadow:  2px 5px rgba(185, 149, 6, 0.2);
 }
 .card-title {
-    
     padding: 5px;
     text-align: center;
-    
+        
 }
 
 .card-img {
@@ -84,6 +83,7 @@ main {
    display: flex;
    flex-direction: column;
    justify-content:flex-end;
+   padding: 5px;
 }
 footer {
     margin-top: auto;

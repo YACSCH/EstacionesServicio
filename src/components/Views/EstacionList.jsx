@@ -26,7 +26,6 @@ const  EstacionList = ({ estaciones }) => {
           </Popup>
         </Marker>
       </MapContainer>
-
         <section className="card-body">
           <p className="card-text">Dirección: {item.direccion_calle} {item.direccion_numero}</p>
           <p className="card-text">Comuna: {item.nombre_comuna}</p>
