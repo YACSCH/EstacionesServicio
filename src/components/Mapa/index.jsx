@@ -8,7 +8,9 @@ let iconUbicacion = new L.icon({
     iconUrl:icon,
     iconShadow: iconShadow,
   })
+
 const Mapa = ({ data, pos}) => {
+
   return (
     <MapContainer center={pos} zoom={13} scrollWheelZoom={false} className='mapa'>
         <TileLayer
@@ -23,7 +25,6 @@ const Mapa = ({ data, pos}) => {
             Distribuidor: {item.distribuidor.nombre } <br /> 
             Direccion: {item.direccion_calle} {item.direccion_numero} <br />
             Horario de Atencion : {item.horario_atencion} 
-            
           </Popup>
         </Marker>
          ))}
