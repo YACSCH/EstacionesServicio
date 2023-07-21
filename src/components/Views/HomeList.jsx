@@ -1,5 +1,5 @@
 
-import Mapa from '../Mapa'
+import Mapa from '../Maps'
 
 
 const HomeList = ({ datos }) => {

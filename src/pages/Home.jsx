@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import Main from  '../components/Main'
 
 
+
 function Home() {
   const [data, setData] = useState([]);
 

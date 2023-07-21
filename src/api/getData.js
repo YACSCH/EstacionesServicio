@@ -48,7 +48,7 @@ export const GetRegion = async  () => {
     const url = import.meta.env.VITE_URL_REGIONES
     try {
         const response = await axios.get(url);
-          return response.data;
+           return response.data;
     } catch (error) {
        console.log(error) 
     }
