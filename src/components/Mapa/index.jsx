@@ -1,13 +1,14 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
+import { Icon } from 'leaflet'
 import L from 'leaflet'
-import icon from '../../../public/img/marker-icon.png'
+import markerIcon from '../../../public/img/marker-icon.png'
 import iconShadow from '../../../public/img/marker-shadow.png'
 
 let iconUbicacion = new L.icon({
-    iconUrl:icon,
+    iconUrl:markerIcon,
     iconShadow: iconShadow,
-})
+}) 
 
 const Mapa = ({ data, pos}) => {
 
@@ -20,7 +21,7 @@ const Mapa = ({ data, pos}) => {
         {data.map((item,index) => (
 
        
-        <Marker position= {[item.ubicacion.latitud, item.ubicacion.longitud]} con={iconUbicacion} key={index}>
+        <Marker position= {[item.ubicacion.latitud, item.ubicacion.longitud]} icon={iconUbicacion} key={index}>
           <Popup>
             Distribuidor: {item.distribuidor.nombre } <br /> 
             Direccion: {item.direccion_calle} {item.direccion_numero} <br />
