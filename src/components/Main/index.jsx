@@ -11,7 +11,7 @@ useEffect(() => {
   setTimeout(() => {
     setIsLoading(false); 
   }, 2000);
-}, [type]);
+}, [type]); 
 
   return (
      <main>
@@ -23,7 +23,7 @@ useEffect(() => {
         {type === 'estaciones' && <EstacionList estaciones ={data} />}
         {type === 'distribuidores' && <DistribuidoreList distribuidores={data} />}
         </>
-      )}
+      )} 
       </main>
   )
 }
