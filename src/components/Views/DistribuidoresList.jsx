@@ -1,8 +1,9 @@
 const  DistribuidoresList = ({ distribuidores }) => {
+  const filterDistibuidores = Object.values(distribuidores).filter((station) => station.id_region === "13");
   return (
     <>
-    {   distribuidores ?
-      Object.values(distribuidores).map((item,index) => (
+    {   filterDistibuidores ?
+      Object.values(filterDistibuidores).map((item,index) => (
       <article className="card" key={index}>
         <h3 className="card-title">{item.nombre_empresa}</h3>
         <section className="card-body">

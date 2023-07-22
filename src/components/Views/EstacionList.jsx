@@ -11,11 +11,11 @@ let iconUbicacion = new L.icon({
   })
 
 const  EstacionList = ({ estaciones }) => {
-  const filteredStations = Object.values(estaciones).filter((station) => station.id_region === "13");
+  const filterStations = Object.values(estaciones).filter((station) => station.id_region === "13");
   return (
     <>
-    {   estaciones ?
-      Object.values(filteredStations).map((item,index) => (
+    {   filterStations ?
+      Object.values(filterStations).map((item,index) => (
       <article className="card" key={index}>
         <h2 className="card-title">{item.distribuidor.nombre}</h2>
         <MapContainer center={[item.ubicacion.latitud, item.ubicacion.longitud]}  zoom={13} scrollWheelZoom={false} className='card-img'>

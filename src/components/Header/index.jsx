@@ -5,7 +5,7 @@ const Header = () => {
     <header>
         <p>
         <img src="" alt="" /> 
-        Estaciones de Servicio
+        Estaciones de Servicio Santiago
         </p>
         <nav>
             <Link to="/" className='nav-item'>Inicio</Link>

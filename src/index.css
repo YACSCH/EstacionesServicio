@@ -93,6 +93,13 @@ footer {
     color: azure;
     padding: 20px;
 }
+.notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 40px;
+}
 @media (min-width: 900px) {
     header {
         flex-direction: row;
