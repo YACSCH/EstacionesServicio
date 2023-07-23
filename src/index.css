@@ -25,6 +25,9 @@ header {
     padding: 10px;
     font-weight: 700;
 }
+.header-icon {
+    padding-right: 5px;
+}
 nav {
     display: flex;
     flex-direction: column;
@@ -35,6 +38,7 @@ nav {
     text-decoration: none;
     padding: 10px;
     color:whitesmoke;
+    
 }
 .nav-item:hover {
     color: orange;
@@ -91,14 +95,28 @@ footer {
     text-align: center;
     background-color: #29353b;
     color: azure;
-    padding: 20px;
+    padding: 10px;
 }
+.footer-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    
+}
+.footer-list-item a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
 .notfound {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     font-size: 40px;
+    list-style-type: none;
 }
 @media (min-width: 900px) {
     header {
