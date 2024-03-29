@@ -101,7 +101,7 @@ footer {
 }
 .footer-list-item a {
   text-decoration: none;
-  color: whitesmoke;
+  color: rgb(5, 5, 5);
   padding-right: 10px;
   font-size: 30px;
 }
