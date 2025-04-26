@@ -11,13 +11,15 @@ let iconUbicacion = new L.icon({
   })
 
 const  EstacionList = ({ estaciones }) => {
-  const filterStations = Object.values(estaciones).filter((station) => station.id_region === "13");
+
+  const filterStations = Object.values(estaciones).filter((station) => station.ubicacion.codigo_region === "13");
+
   return (
     <>
     {   filterStations ?
       Object.values(filterStations).map((item,index) => (
       <article className="card" key={index}>
-        <h2 className="card-title">{item.distribuidor.nombre}</h2>
+        <h2 className="card-title">{item.distribuidor.marca}</h2>
         <MapContainer center={[item.ubicacion.latitud, item.ubicacion.longitud]}  zoom={13} scrollWheelZoom={false} className='card-img'>
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
@@ -28,7 +30,7 @@ const  EstacionList = ({ estaciones }) => {
         </Marker>
       </MapContainer>
         <section className="card-body">
-          <p className="card-text">Dirección: {item.direccion_calle} {item.direccion_numero}</p>
+          <p className="card-text">Dirección: {item.ubicacion.direccion} {item.direccion_numero}</p>
           <p className="card-text">Comuna: {item.nombre_comuna}</p>
           <p className="card-text">Región: {item.nombre_region}</p>
         </section>

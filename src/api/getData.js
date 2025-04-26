@@ -26,6 +26,7 @@ export const GetEstaciones = async () => {
               'Authorization': token 
             }} );
           return response;
+        
     } catch (error) {
        console.log(error) 
     }  
