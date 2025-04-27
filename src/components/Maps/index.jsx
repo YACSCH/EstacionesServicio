@@ -11,7 +11,7 @@ let iconUbicacion = new L.icon({
 }) 
 
 const Mapa = ({ data, pos}) => {
-
+ 
   return (
     <MapContainer center={pos} zoom={13} scrollWheelZoom={false} className='mapa'>
         <TileLayer
@@ -20,18 +20,19 @@ const Mapa = ({ data, pos}) => {
         />
         {data.map((item,index) => (
 
-       
+         
+        
         <Marker position= {[item.ubicacion.latitud, item.ubicacion.longitud]} icon={iconUbicacion} key={index}>
           <Popup>
             Distribuidor: {item.distribuidor.marca } <br /> 
             Direccion: {item.direccion_calle} {item.ubicacion.direccion} <br />
             Horario de Atencion : {item.horario_atencion} 
             <h3>Precios</h3>
-            Gas-93 : {item.precios?.["93"]?.precio} <br/>
-            Gas-95 : {item.precios?.["95"]?.precio} <br/>
-            Gas-97 : {item.precios?.["97"]?.precio} <br/>
-            Diesel : {item.precios?.["DI"]?.precio} <br/>
-            Kerosene : {item.precios?.["KE"]?.precio} <br/>
+            Gas-93 : {item.precios?.["93"]?.precio || item?.precios?.["A93"]?.precio} <br/>
+            Gas-95 : {item.precios?.["95"]?.precio || item?.precios?.["A95"]?.precio} <br/>
+            Gas-97 : {item.precios?.["97"]?.precio || item?.precios?.["A97"]?.precio} <br/>
+            Diesel : {item.precios?.["DI"]?.precio || item?.precios?.["ADI"]?.precio} <br/>
+            Kerosene : {item.precios?.["KE"]?.precio || item?.precios?.["AKE"]?.precio} <br/>
           </Popup>
         </Marker>
          ))}
