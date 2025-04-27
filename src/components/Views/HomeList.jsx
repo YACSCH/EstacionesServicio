@@ -76,6 +76,15 @@ const HomeList = ({ datos }) => {
 
   if (loading || !position) return <p>Cargando mapa...</p>;
 
+  if (filteredStations.length === 0) {
+    return (
+      <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+        <h2>No hay estaciones cercanas a tu ubicación 🚫⛽</h2>
+        <p>Intenta ampliar tu rango de búsqueda.</p>
+      </div>
+    );
+  }
+
   return (
     <Mapa data={filteredStations} pos={position} />
   );
