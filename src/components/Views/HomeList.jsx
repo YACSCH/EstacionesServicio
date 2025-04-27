@@ -57,7 +57,7 @@ const HomeList = ({ datos }) => {
             parseFloat(latitud),
             parseFloat(longitud)
           );
-          return distance <= 5; // Aquí defines tu rango de cercanía en KM
+          return distance <= 10; // Aquí defines tu rango de cercanía en KM
         });
 
         setFilteredStations(nearbyStations);
