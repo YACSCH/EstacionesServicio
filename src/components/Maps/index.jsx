@@ -11,6 +11,7 @@ let iconUbicacion = new L.icon({
 }) 
 
 const Mapa = ({ data, pos}) => {
+  console.log(data.length);
  
   return (
     <MapContainer center={pos} zoom={13} scrollWheelZoom={false} className='mapa'>

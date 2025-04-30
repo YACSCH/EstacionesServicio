@@ -45,27 +45,32 @@ const HomeList = ({ datos }) => {
     const fetchLocationAndFilter = async () => {
       try {
         const userPos = await getUserLocation();
+        /*  const userPos = {
+          lat: -35.58688849745577,
+          lon: -71.7332736898634
+        }; */ 
         setPosition([userPos.lat, userPos.lon]);
 
-        // Filtrar todas las estaciones cercanas (por ejemplo, máximo 5 km)
+
+        // Filtrar todas las estaciones cercanas (por ejemplo, máximo 10 km)
         const nearbyStations = Object.values(datos).filter((station) => {
+          
           const { latitud, longitud } = station.ubicacion;
+
           if (!latitud || !longitud) return false;
+
           const distance = getDistanceKm(
             userPos.lat,
             userPos.lon,
             parseFloat(latitud),
             parseFloat(longitud)
           );
-          return distance <= 10; // Aquí defines tu rango de cercanía en KM
+          return distance <= 5; // Rango de cercanía en KM
         });
-
         setFilteredStations(nearbyStations);
+
       } catch (error) {
         console.error(error);
-        // Si falla la ubicación, podrías cargar todas las estaciones o ninguna
-        setPosition([-33.4374154, -70.6512777]);
-        setFilteredStations(Object.values(datos)); // Mostrar todas en caso de error
       } finally {
         setLoading(false);
       }
@@ -73,6 +78,7 @@ const HomeList = ({ datos }) => {
 
     fetchLocationAndFilter();
   }, [datos]);
+
 
   if (loading || !position) return <p>Cargando mapa...</p>;
 
