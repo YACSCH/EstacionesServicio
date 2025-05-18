@@ -12,8 +12,7 @@ import { faEnvelope,faUser }from '@fortawesome/free-solid-svg-icons'
         <li className='footer-list-item'><a href="https://www.facebook.com" target="_blank"><FontAwesomeIcon icon={ faFacebook }/></a></li>
         <li className='footer-list-item'><a href="mailto:yamilcs@gmail.com" target="_blank"><FontAwesomeIcon icon={ faEnvelope }/></a></li>
       </ul>
-      <p>Yamil Castillo Schmidt</p>
-      <p>Julio 2023</p>
+      <p>YACS</p>
     </footer>
   )
 }
